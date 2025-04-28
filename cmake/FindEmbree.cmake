@@ -1,21 +1,21 @@
 find_path(EMBREE_INCLUDE_PATH embree4/rtcore.h
-  ${CMAKE_SOURCE_DIR}/embree/include
+  ${CMAKE_SOURCE_DIR}/lajolla//embree/include
   /usr/include
   /usr/local/include
   /opt/local/include)
 
 if (APPLE)
 find_library(EMBREE_LIBRARY NAMES embree4 PATHS
-  ${CMAKE_SOURCE_DIR}/embree/lib-macos
+  ${CMAKE_SOURCE_DIR}/lajolla//embree/lib-macos
   /usr/lib
   /usr/local/lib
   /opt/local/lib)
 elseif (WIN32)
 find_library(EMBREE_LIBRARY NAMES embree4 PATHS
-  ${CMAKE_SOURCE_DIR}/embree/lib-win32)
+  ${CMAKE_SOURCE_DIR}/lajolla//embree/lib-win32)
 else ()
 find_library(EMBREE_LIBRARY NAMES embree4 PATHS
-  ${CMAKE_SOURCE_DIR}/embree/lib-linux
+  ${CMAKE_SOURCE_DIR}/lajolla//embree/lib-linux
   /usr/lib
   /usr/local/lib
   /opt/local/lib)
